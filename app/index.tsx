@@ -1,15 +1,19 @@
-import { Text, View } from "react-native";
+import { colors } from "@/style/colors";
+import { layout } from "@/style/layout";
+import { StyleSheet, Text, View } from "react-native";
 
-export default function Index() {
+export default function Home() {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>Edit app/index.tsx to edit this screen.</Text>
+    <View style={[layout.container, { backgroundColor: colors.primary[50] }]}>
+      <Text style={styles.heading1}>Python lernen</Text>
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  heading1: {
+    fontSize: 26,
+    fontWeight: "bold",
+    color: colors.primary[900],
+  },
+});
