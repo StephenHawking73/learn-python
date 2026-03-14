@@ -1,19 +1,24 @@
+import Container from "@/components/Container";
 import { colors } from "@/style/colors";
-import { layout } from "@/style/layout";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text } from "react-native";
 
 export default function Home() {
   return (
-    <View style={[layout.container, { backgroundColor: colors.primary[50] }]}>
-      <Text style={styles.heading1}>Python lernen</Text>
-    </View>
+    <Container>
+      <Text style={styles.title}>Python lernen!</Text>
+      <Text style={styles.subtitle}>Willkommen zur Lernplattform</Text>
+    </Container>
   );
 }
 
 const styles = StyleSheet.create({
-  heading1: {
-    fontSize: 26,
+  title: {
+    fontSize: 32,
     fontWeight: "bold",
-    color: colors.primary[900],
+    color: colors.primary["900"],
+  },
+  subtitle: {
+    fontSize: 15,
+    marginTop: 5,
   },
 });
